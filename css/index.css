@@ -3,11 +3,17 @@
     height: 70px;
     background-color: pink;
 }
+.t_banx{
+    width: 1122px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
 .logo{
     width: 160px;
     height: 100%;
-    margin-left: 15%;
     display: inline-block;
+    margin-right: 20px;
 }
 .logo a{
     width: 100%;
@@ -27,8 +33,8 @@
 .nav>ul>li>a{
     float: left;
     height: 100%;
-    padding-left: 18px;
-    padding-right:18px;
+    padding-left: 20px;
+    padding-right:20px;
     color: #fff;
 }
 .nav>ul>li>a:hover{
@@ -54,9 +60,63 @@ position: absolute;
 }
 .hot{
     position: absolute;
-        left: 450px;
+        left: 474px;
        top: 20px;
         width: 28px;
         height: 19px;
         background: url(../img/topbar.png) no-repeat -190px 0;
     }
+.search{
+   width: 272px;
+   height: 100%;
+   float: right;
+   margin-right: 116px;
+   position: relative;
+}
+.search>input{
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 19px;
+    border-radius: 20px;
+   
+}
+.x_t{
+    position: absolute;
+    top: 22px;
+    width: 28px;
+    height: 32px;
+    background: url(../img/topbar.png) no-repeat 0 -99px;
+}
+.search>.ph{
+    position: absolute;
+    top: 28px;
+   left: 31px;
+   color: #9b9b9b;
+   cursor: text;
+}
+.CreatorCenter{
+    float:right;
+    width: 90px;
+    height: 30px;
+    border: 1px solid #4f4f4f;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 22px;
+}
+.CreatorCenter:hover{
+    border-color: #fff;
+}
+.CreatorCenter>a{
+   display: inline-block;
+width: 100%;
+height: 100%;
+    color: #9b9b9b;
+}
+.login{
+    position: absolute;
+    right: 26px;
+    top: 0px;
+}
