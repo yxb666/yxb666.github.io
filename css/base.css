@@ -1,4 +1,4 @@
-body,ul,h1,h2,h3,h4,h5,h6{
+body,ul,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
@@ -8,6 +8,8 @@ h1,h2,h3,h4,h5,h6{
 }
 a{
     text-decoration:none;
+    /* 点击a标签显示透明色，不设置会显示蓝色 */
+    -webkit-tap-highlight-color:transparent;
 }
 ul{
     list-style:none;
@@ -26,11 +28,4 @@ img{
 }
 .clearfix{
     zoom:1;
-}
-
-.fl{
-    float:left;
-}
-.fr{
-    float:right;
 }
