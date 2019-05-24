@@ -17,7 +17,9 @@ ul{
 img{
     border:0px;
 }
-
+body{
+    font-size: 12px;
+}
 /* 清除浮动，解决margin-top塌陷 */
 .clearfix:before,.clearfix:after{
     content:'';
