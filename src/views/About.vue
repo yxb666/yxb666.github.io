@@ -2,8 +2,12 @@
   <div class="about">
     <h1 class="headline">技术资料</h1>
     <div class="text-p">
+      <!-- 左 -->
       <div style="width:50%;">
-        <p class="title_p" @click="program">小程序：</p>
+        <p class="title_p" @click="program">
+          小程序：
+          <span class="arrows">></span>
+        </p>
         <div v-if="status">
           <p>1.分佣宝（2018年4月）</p>
           <p>2.选址易【独立】（2019年7月）技术点：{</p>
@@ -57,11 +61,24 @@
           <p>CSDN：https://me.csdn.net/caoyan0829</p>
           <p>牛客：https://www.nowcoder.com/4270576</p>
         </div>
+        <p class="title_p" @click="program7">容易忽视的git命令：</p>
+        <div v-if="status7">
+          <p>git branch (查看全部分支)</p>
+          <p>git checkout -b xxx (创建分支)</p>
+          <p>git checkout xxx (切换分支)</p>
+          <p>git merge xxx (合并分支)</p>
+          <p>git update-index --assume-unchanged /路径 (已经提交到线上储存库中，后期修改不提交文件->忽略文件)</p>
+          <p>git update-index --no-assume-unchanged /路径 (已经提交到线上储存库中，后期修改不提交文件->恢复忽略文件)</p>
+        </div>
       </div>
+      <!-- 右 -->
       <div style="width:50%;">
         <p class="title_p" @click="program3">vue项目：</p>
         <div v-if="status3">
           <p>1.H5页【独立】 技术点：{</p>
+          <p>
+            vue项目UI框架：Vue-Blu  -  vue-strap  -  vuetify  -  iView  -  Element
+          </p>
           <p>cube-ui组件</p>
           <p>与app进行通信（HB,Buddy）</p>
           <p>vue-amap</p>
@@ -112,7 +129,8 @@ export default {
       status3: false,
       status4: false,
       status5: false,
-      status6: false
+      status6: false,
+      status7: false
     };
   },
   mounted() {},
@@ -134,6 +152,9 @@ export default {
     },
     program6() {
       this.status6 = !this.status6;
+    },
+    program7() {
+      this.status7 = !this.status7;
     }
   }
 };
@@ -143,13 +164,19 @@ export default {
   text-align: left;
   display: flex;
 }
-.headline{
+.headline {
   text-shadow: 1px 0px 1px purple;
   font-size: 26px;
   margin-bottom: 20px;
 }
-.title_p{
+.title_p {
   cursor: pointer;
   text-shadow: 1px 0px 1px rgb(138, 121, 98);
+  position: relative;
+  .arrows {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
 }
 </style>
