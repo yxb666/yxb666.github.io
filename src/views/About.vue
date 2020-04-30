@@ -89,6 +89,15 @@
           <p>git update-index --assume-unchanged /路径 (已经提交到线上储存库中，后期修改不提交文件->忽略文件)</p>
           <p>git update-index --no-assume-unchanged /路径 (已经提交到线上储存库中，后期修改不提交文件->恢复忽略文件)</p>
         </div>
+        <p class="title_p" @click="program9">
+          ES6常用语法：
+          <i v-if="status9" class="el-icon-arrow-down arrows"></i>
+          <i v-else class="el-icon-arrow-right arrows"></i>
+        </p>
+        <div v-if="status9" class="content_introduce">
+          <p>解构语法：假设 x,y两个变量的值互换 var x=1;y=2; [x,y] = [y,x];</p>
+          <p>假设 var person={name:"小明",age:20,gender:{city:"背景"}};多重数据结构必须找准对应结构进行赋值 var {gender:{city:a}} = person; console.log(a);</p>
+        </div>
       </div>
       <!-- 右 -->
       <div style="width:50%;padding:0px 20px;">
@@ -152,6 +161,23 @@
           <p>其它：</p>
           <p>友盟统计，草料二维码，百度短链接，tinyPNG（图片处理），OSS图片服务，jekins，禅道，TAPD，</p>
           <p>nvm，puppeteer（自测），gitLab，git，nginx（腾讯云配置)</p>
+          <p>
+            廖雪峰js指导：
+            <a href="https://www.liaoxuefeng.com/wiki/1022910821149312">https://www.liaoxuefeng.com/</a>
+          </p>
+        </div>
+        <p class="title_p" @click="program10">
+          js方法：
+          <i v-if="status10" class="el-icon-arrow-down arrows"></i>
+          <i v-else class="el-icon-arrow-right arrows"></i>
+        </p>
+        <div v-if="status10" class="content_introduce">
+          <p>数组shift（）方法 把原数组第一个元素删除,并返回第一个元素</p>
+          <p>数组pop（）方法 把原数组最后一个元素删除,并返回最后一个元素</p>
+          <p>indexOf（需要检索的字符串，从第几位开始）存在返回下标 不存在返回-1</p>
+          <p>typeof（）运算符 可以作用于数据类型判断</p>
+          <p>数组 map（）方法 例：array.map(function(currentValue,index,arr), thisValue)</p>
+          <p>for...in  它可以把一个对象的所有属性依次循环出来</p>
         </div>
       </div>
     </div>
@@ -168,7 +194,9 @@ export default {
       status5: false,
       status6: false,
       status7: false,
-      status8: false
+      status8: false,
+      status9: false,
+      status10: false
     };
   },
   mounted() {},
@@ -199,6 +227,9 @@ export default {
     },
     program9() {
       this.status9 = !this.status9;
+    },
+    program10() {
+      this.status10 = !this.status10;
     }
   }
 };
@@ -287,6 +318,7 @@ export default {
   }
 }
 .content_introduce {
+  background-color: #e7dec3;
   p {
     padding: 4px 20px;
   }

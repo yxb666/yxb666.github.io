@@ -16,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #f9f9f9;
+  background-color:#dfdeda;
   // background: url(../static/image/background_image.jpg) no-repeat;
   width: 100%;
   height:100vh;
